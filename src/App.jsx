@@ -11,7 +11,6 @@ function App() {
     <>
       <div className="App">
         <Navbar />
-        <h2>Movies Aost</h2>
         <Outlet />
       </div>
       

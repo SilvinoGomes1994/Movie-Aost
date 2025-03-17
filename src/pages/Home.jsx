@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import MovieCard from '../Components/MovieCard';
 /*useState pra poder gerenciar os estados dos filmes */
 /*useEffect pra gente poder fazer a chamada da API quando a página carregar.*/
 
@@ -14,11 +15,10 @@ const Home = () => {
         const res = await fetch(url);
         const data = await res.json();
 
-        console.log(data);
+        setTopMovies(data.results);
     };
 
     useEffect(() => {
-
         const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
 
         getTopRatedMovies(topRatedUrl);
@@ -26,8 +26,14 @@ const Home = () => {
 
 
   return (
-    <div>Home</div>
-  )
+    <div className='container'>
+        <h2 className='title'>Melhores Filmes:</h2>
+        <div className='movies-container'>
+            {topMovies.length === 0 && <p>Carregando...</p> }
+            {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)} /*Se o array nao estiver vazio, mostrar os eltos*/
+        </div>
+    </div>
+  );
 };
 
 export default Home
