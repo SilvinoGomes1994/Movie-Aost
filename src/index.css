@@ -1,0 +1,22 @@
+* {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para que nenhum elemento passe a largura do elemento pai*/ 
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none; /*Tirar a decoracao de texto em todos os links */
+  color: #f7d354;
+  transition: .5s;
+}
+
+a:hover {
+  color: #b8930c; /*Quando passar o mouse por cima do link, mudar pra essa cor*/
+
+}
