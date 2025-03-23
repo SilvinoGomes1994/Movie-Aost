@@ -30,7 +30,7 @@ const Home = () => {
         <h2 className='title'>Melhores Filmes:</h2>
         <div className='movies-container'>
             {topMovies.length === 0 && <p>Carregando...</p> }
-            {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)} /*Se o array nao estiver vazio, mostrar os eltos*/
+            {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)} /*se o array nao estiver vazio, mostrar os elemntos*/
         </div>
     </div>
   );
