@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import MovieCard from '../Components/MovieCard';
+
+import './MoviesGrid.css'
+
 /*useState pra poder gerenciar os estados dos filmes */
 /*useEffect pra gente poder fazer a chamada da API quando a página carregar.*/
 
