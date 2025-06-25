@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
-import Styles from "./NotFoundPage.module.css"
+import { Link } from 'react-router-dom'
+import Styles from './NotFoundPage.module.css'
 
 const NotFoundPage = () => {
     return (
-        <div className={Styles.fondo_carbon} >
+        <div className={Styles.container} >
             <h1>Not Found Page ❌</h1>
             <p className={Styles.paragraph}>Error 404</p>
             <Link to={"/"}>
