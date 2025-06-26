@@ -7,24 +7,23 @@ const apiKey = import.meta.env.VITE_API_KEY
 
 import "./MoviesGrid.css";
 
-function Search() {
+const Search = () => {
   const [searchParams] = useSearchParams()
-
   const [movies, setMovies] = useState([])
-  const query = searchParams.get("q");
+  const query = searchParams.get("q")
 
   const getSearchedMovies = async (url) => {
-      const res = await fetch(url);
-      const data = await res.json();
-  
-      setMovies(data.results);
-    };
-  
-    useEffect(() => {
-      const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
-  
-      getSearchedMovies(searchWithQueryURL);
-    }, [query]);
+    const res = await fetch(url);
+    const data = await res.json();
+
+    setMovies(data.results);
+  };
+
+  useEffect(() => {
+    const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
+
+    getSearchedMovies(searchWithQueryURL);
+  }, [query]);
 
   return (
     <div className='container'>

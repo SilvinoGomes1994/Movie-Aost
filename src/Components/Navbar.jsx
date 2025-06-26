@@ -11,14 +11,14 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (!search) return
+    if (!search) return 
     navigate(`/search?q=${search}`);
     setSearch("");
 
   }
 
   return (
-    <nav id="navbar">
+    <nav className="navbar">
       <h2>
         <Link to="/">
           <BiCameraMovie /> MoviesAost
