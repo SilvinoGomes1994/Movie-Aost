@@ -31,7 +31,7 @@ const Movie = () => {
   }
 
   useEffect (()=>{
-    const movieUrl = `${moviesURL}${id}?${apiKey}`
+    const movieUrl = `${moviesURL}${id}?${apiKey}`;
     getMovie(movieUrl)
   },[])
 
@@ -49,7 +49,6 @@ const Movie = () => {
         </h3>
         <p>{formatCurrency(movie.budget)}</p>
       </div>
-
       <div className="info">
         <h3>
           <BsGraphUp/> Receita:

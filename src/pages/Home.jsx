@@ -31,7 +31,6 @@ const Home = () => {
     <div className='container'>
       <h2 className='title'>Melhores Filmes:</h2>
       <div className='movies-container'>
-
         {topMovies.length > 0 ? (
           topMovies.map((movie) =>
             <MovieCard key={movie.id} movie={movie} />)
