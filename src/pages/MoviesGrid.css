@@ -66,3 +66,9 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.movie-page__details{
+    width: max-content;
+    height: fit-content;
+}

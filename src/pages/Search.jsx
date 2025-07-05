@@ -22,10 +22,12 @@ const Search = () => {
     setMovies(data.results);
     console.log("Ola..." + data.results);
   };
+
 {/*https://api.themoviedb.org/3/search/movie?api_key=SUA_API_KEY&query=termo_da_busca
 https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchTerm}
 https://api.themoviedb.org/3/search/movie/?api_key=f0908e874817877400f1f963a289f682&query=Batman
 */}
+
   useEffect(() => {
     const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
     console.log(searchURL);
