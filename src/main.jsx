@@ -12,6 +12,7 @@ import NotFoundPage from './pages/NotFoundPage.jsx'
 const router=createBrowserRouter([
   {path:"/", element:<App/>, errorElement: <NotFoundPage />, children:[
     {path:"/", element: <Home/>},
+    {path:"/Movie-Aost", element:<Home/>},
     {path:"movie/:id", element: <Movie />},
     {path:"search", element: <Search />},
   ]}

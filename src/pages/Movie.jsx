@@ -73,7 +73,7 @@ const Movie = () => {
                 <h3>
                   <BsFillFileEarmarkTextFill /> Descrição:
                 </h3>
-                <p>{movie.overview.trimEnd()}</p>
+                <p>{movie.overview}</p>
               </div>
             </div>
 
